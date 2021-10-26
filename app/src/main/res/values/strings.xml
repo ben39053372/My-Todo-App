@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">My Android Template</string>
     <string name="Home_title">Home</string>
+    <string name="main_fragment_title">Main</string>
+    <string name="second_fragment_title">Second</string>
+    <string name="appbar_menu_title">Menu</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="drawer_title_main">Main</string>
+    <string name="drawer_title_second">second</string>
 </resources>

@@ -8,11 +8,12 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.ben39053372.myandroidtemplate.MainFragment"
-        android:label="main_fragment"
+        android:label="@string/main_fragment_title"
         tools:layout="@layout/main_fragment" />
+
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.ben39053372.myandroidtemplate.SecondFragment"
-        android:label="second_fragment"
+        android:label="@string/second_fragment_title"
         tools:layout="@layout/second_fragment" />
 </navigation>
