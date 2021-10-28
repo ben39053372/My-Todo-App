@@ -22,7 +22,7 @@
         </activity>
 
         <activity
-            android:name=".UI.Main.MainActivity"
+            android:name=".UI.MainActivity"
             android:theme="@style/AppTheme" />
 
         <!-- endregion -->
