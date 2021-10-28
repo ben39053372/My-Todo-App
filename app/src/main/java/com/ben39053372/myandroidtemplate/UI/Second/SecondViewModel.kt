@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate
+package com.ben39053372.myandroidtemplate.UI.Second
 
 import androidx.lifecycle.ViewModel
 

@@ -1,10 +1,11 @@
-package com.ben39053372.myandroidtemplate
+package com.ben39053372.myandroidtemplate.UI.Main
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ben39053372.myandroidtemplate.R
 
 class MainFragment : Fragment() {
 
