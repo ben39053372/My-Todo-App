@@ -14,6 +14,7 @@ class SplashActivity : AppCompatActivity() {
         splashScreen.setOnExitAnimationListener {
             it.remove()
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 }
