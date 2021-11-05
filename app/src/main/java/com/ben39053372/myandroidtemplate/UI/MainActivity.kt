@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
 
         setupNavigationUI()
+        setSupportActionBar(findViewById(R.id.my_toolbar))
+
     }
 
     /**
