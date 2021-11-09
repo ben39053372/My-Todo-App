@@ -8,4 +8,6 @@
     <string name="navigation_drawer_close">Drawer Closed</string>
     <string name="drawer_title_main">Main</string>
     <string name="drawer_title_second">second</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
 </resources>

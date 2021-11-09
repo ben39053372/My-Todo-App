@@ -24,4 +24,8 @@
         # Required.
     </style>
 
+    <style name="AppTheme.ToolBarStyle">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
 </resources>
