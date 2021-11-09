@@ -35,9 +35,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         // setup navigation ui
         setupNavigationUI()
 
-        // set Toolbar to ActionBar
-        setSupportActionBar(toolbar)
-
     }
 
     /**
@@ -52,6 +49,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         navigationView.setupWithNavController(navController)
 
+        // set Toolbar to ActionBar
+        // ** must before set actionBarDrawerToggle
+        setSupportActionBar(toolbar)
+
+        // ** must after setSupportActionBar
         actionBarDrawerToggle = ActionBarDrawerToggle(
             this,
             drawerLayout,
@@ -61,6 +63,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         )
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
+
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
