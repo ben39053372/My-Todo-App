@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.ben39053372.myandroidtemplate.R
 import com.google.android.material.navigation.NavigationView
 
-
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -22,6 +21,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     private lateinit var toolbar: Toolbar
 
+    // region Lifecycle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     }
 
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        actionBarDrawerToggle.syncState()
+    }
+    //endregions
+
+    //region functions
     /**
      * setup drawer and toolbar
      */
@@ -66,9 +73,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     }
 
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        actionBarDrawerToggle.syncState()
-    }
+    //endregion
 
 }
