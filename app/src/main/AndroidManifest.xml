@@ -17,7 +17,7 @@
 
         <!-- region  activity here -->
 
-        <activity android:name=".UI.SplashScreen.SplashActivity">
+        <activity android:name=".ui.splashScreen.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,7 +25,7 @@
         </activity>
 
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/AppTheme" />
 
         <!-- endregion -->

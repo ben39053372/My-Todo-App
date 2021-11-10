@@ -7,13 +7,19 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ben39053372.myandroidtemplate.UI.Home.HomeFragment"
+        android:name="com.ben39053372.myandroidtemplate.ui.home.HomeFragment"
         android:label="@string/Home_title"
         tools:layout="@layout/main_fragment" />
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.ben39053372.myandroidtemplate.UI.Second.SecondFragment"
+        android:name="com.ben39053372.myandroidtemplate.ui.second.SecondFragment"
         android:label="@string/second_fragment_title"
         tools:layout="@layout/second_fragment" />
+
+    <fragment
+        android:id="@+id/viewpager2"
+        android:name="com.ben39053372.myandroidtemplate.ui.viewPager2.ViewPager2Fragment"
+        android:label="@string/view_pager2"
+        tools:layout="@layout/fragment_view_pager2" />
 </navigation>

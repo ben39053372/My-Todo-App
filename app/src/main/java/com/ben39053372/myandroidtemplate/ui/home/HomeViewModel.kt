@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.UI.Home
+package com.ben39053372.myandroidtemplate.ui.home
 
 import androidx.lifecycle.ViewModel
 

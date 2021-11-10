@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.UI
+package com.ben39053372.myandroidtemplate.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
