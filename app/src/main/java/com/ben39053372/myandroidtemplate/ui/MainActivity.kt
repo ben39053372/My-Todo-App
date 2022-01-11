@@ -1,18 +1,22 @@
 package com.ben39053372.myandroidtemplate.ui
 
 import android.os.Bundle
+import android.view.View
+import android.view.ViewTreeObserver
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.ben39053372.myandroidtemplate.R
+import com.ben39053372.myandroidtemplate.utils.BaseActivity
 import com.google.android.material.navigation.NavigationView
+import timber.log.Timber
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class MainActivity : BaseActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
@@ -24,6 +28,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // region Lifecycle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
+
+        // for splash screen
+        setupOnPreDrawListener()
+
+        setContentView(R.layout.activity_main)
 
         // region define component
         toolbar = findViewById(R.id.my_toolbar)
@@ -70,6 +80,29 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         )
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
+    }
+
+    private fun setupOnPreDrawListener() {
+        val content: View = findViewById(android.R.id.content)
+        content.viewTreeObserver.addOnPreDrawListener(
+            object : ViewTreeObserver.OnPreDrawListener {
+                val num = 5
+                var curr = 0
+                override fun onPreDraw(): Boolean {
+                    return if(curr < num) {
+                        curr++
+                        Timber.d("curr++")
+                        Thread.sleep(500)
+                        false
+                    } else {
+                        true
+                    }
+                }
+            }
+        )
+    }
+
+    private fun preLoadingData() {
 
     }
 
