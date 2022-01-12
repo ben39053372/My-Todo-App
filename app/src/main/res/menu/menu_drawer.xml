@@ -10,4 +10,8 @@
     <item
         android:id="@+id/viewpager2"
         android:title="@string/view_pager2" />
+
+    <item
+        android:id="@+id/todo_fragment"
+        android:title="@string/todo" />
 </menu>

@@ -11,5 +11,6 @@
     <string name="drawer_open">drawer open</string>
     <string name="drawer_close">drawer close</string>
     <string name="view_pager2">View Pager 2</string>
+    <string name="todo">Todo</string>
     <string name="CHANNEL_ID">CHANNEL_ID</string>
 </resources>
