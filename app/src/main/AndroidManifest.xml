@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ben39053372.myandroidtemplate">
+    package="com.ben39053372.TodoApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".App"
+        android:name="com.ben39053372.TodoApp.App"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,13 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
 
-        <service android:name=".services.MainService"/>
-        <service android:name=".services.NotificationService" />
+        <service android:name="com.ben39053372.TodoApp.services.MainService"/>
+        <service android:name="com.ben39053372.TodoApp.services.NotificationService" />
 
         <!-- region  activity here -->
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.ben39053372.TodoApp.ui.MainActivity"
             android:theme="@style/Theme.App.Starting"
             android:exported="true">
             <intent-filter>

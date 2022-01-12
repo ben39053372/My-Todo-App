@@ -6,7 +6,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.ben39053372.myandroidtemplate"
+        applicationId "com.ben39053372.my_todo_app"
         minSdkVersion 27
         targetSdkVersion 31
         versionCode 1

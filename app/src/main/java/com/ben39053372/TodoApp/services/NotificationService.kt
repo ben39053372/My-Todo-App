@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.services
+package com.ben39053372.TodoApp.services
 
 import android.app.Notification
 import android.app.PendingIntent
@@ -6,9 +6,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.ben39053372.myandroidtemplate.R
-import com.ben39053372.myandroidtemplate.ui.MainActivity
-import com.ben39053372.myandroidtemplate.utils.BaseService
+import com.ben39053372.TodoApp.R
+import com.ben39053372.TodoApp.ui.MainActivity
+import com.ben39053372.TodoApp.utils.BaseService
 
 
 /**

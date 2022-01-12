@@ -1,6 +1,6 @@
-package com.ben39053372.myandroidtemplate.utils
+package com.ben39053372.TodoApp.utils
 
-import com.ben39053372.myandroidtemplate.BuildConfig
+import com.ben39053372.TodoApp.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

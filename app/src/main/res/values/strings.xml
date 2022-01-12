@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Android Template</string>
+    <string name="app_name">Todo App</string>
     <string name="Home_title">Home</string>
     s
     <string name="second_fragment_title">Second</string>

@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.services
+package com.ben39053372.TodoApp.services
 
 import android.app.Service
 import android.content.Intent

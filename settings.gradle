@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "My Android Template"
+rootProject.name = "My Todo App"

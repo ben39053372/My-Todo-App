@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate
+package com.ben39053372.TodoApp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

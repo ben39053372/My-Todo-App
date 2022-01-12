@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate
+package com.ben39053372.TodoApp
 
 import android.annotation.SuppressLint
 import android.app.Application
@@ -7,7 +7,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import timber.log.Timber
-import com.ben39053372.myandroidtemplate.utils.MyLogTree
+import com.ben39053372.TodoApp.utils.MyLogTree
 
 class App : Application() {
     override fun onCreate() {

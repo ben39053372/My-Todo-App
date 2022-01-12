@@ -1,9 +1,9 @@
-package com.ben39053372.myandroidtemplate.utils
+package com.ben39053372.TodoApp.utils
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ben39053372.myandroidtemplate.services.MainService
+import com.ben39053372.TodoApp.services.MainService
 import timber.log.Timber
 
 abstract class BaseActivity: AppCompatActivity() {

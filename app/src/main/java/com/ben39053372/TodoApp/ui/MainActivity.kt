@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.ui
+package com.ben39053372.TodoApp.ui
 
 import android.os.Bundle
 import android.view.View
@@ -11,8 +11,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.ben39053372.myandroidtemplate.R
-import com.ben39053372.myandroidtemplate.utils.BaseActivity
+import com.ben39053372.TodoApp.R
+import com.ben39053372.TodoApp.utils.BaseActivity
 import com.google.android.material.navigation.NavigationView
 import timber.log.Timber
 

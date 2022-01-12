@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.ui.viewPager2
+package com.ben39053372.TodoApp.ui.viewPager2
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.ben39053372.myandroidtemplate.R
+import com.ben39053372.TodoApp.R
 import com.google.android.material.tabs.TabLayout
 
 class ViewPager2Fragment : Fragment() {

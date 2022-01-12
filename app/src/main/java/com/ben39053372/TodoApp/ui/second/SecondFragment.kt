@@ -1,25 +1,26 @@
-package com.ben39053372.myandroidtemplate.ui.home
+package com.ben39053372.TodoApp.ui.second
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.ben39053372.myandroidtemplate.R
+import androidx.fragment.app.viewModels
+import com.ben39053372.TodoApp.R
 
-class HomeFragment : Fragment() {
+class SecondFragment : Fragment() {
 
     companion object {
-        fun newInstance() = HomeFragment()
+        fun newInstance() = SecondFragment()
     }
 
-//    val viewModel: MainViewModel by viewModels()
+    val viewModel: SecondViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.second_fragment, container, false)
     }
 
 }

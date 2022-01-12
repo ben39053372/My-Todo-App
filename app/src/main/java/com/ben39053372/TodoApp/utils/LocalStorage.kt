@@ -1,4 +1,4 @@
-package com.ben39053372.myandroidtemplate.utils
+package com.ben39053372.TodoApp.utils
 
 import android.content.Context
 
