@@ -102,10 +102,6 @@ class MainActivity : BaseActivity() {
         )
     }
 
-    private fun preLoadingData() {
-
-    }
-
     //endregion
 
 }

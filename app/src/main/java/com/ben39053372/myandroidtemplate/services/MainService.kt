@@ -21,6 +21,11 @@ class MainService : Service() {
             try {
                 Thread.sleep(10 * 1000)
                 Timber.i("Sleep", "[Main-Service]")
+                Intent(this@MainService, NotificationService::class.java).also {
+                    it.putExtra("title", "Main Service run")
+                    it.putExtra("contentText", "Main Service run ...")
+                    startService(it)
+                }
             } catch (e: InterruptedException) {
                 // Restore interrupt status.
                 Thread.currentThread().interrupt()
@@ -52,6 +57,7 @@ class MainService : Service() {
         // start ID so we know which request we're stopping when we finish the job
         serviceHandler?.obtainMessage()?.also { msg ->
             msg.arg1 = startId
+            msg.data = intent.extras
             serviceHandler?.sendMessage(msg)
         }
 

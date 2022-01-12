@@ -15,6 +15,7 @@
         android:supportsRtl="true">
 
         <service android:name=".services.MainService"/>
+        <service android:name=".services.NotificationService" />
 
         <!-- region  activity here -->
 

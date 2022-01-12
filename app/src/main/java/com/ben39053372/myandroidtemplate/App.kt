@@ -27,7 +27,7 @@ class App : Application() {
     }
 
     @SuppressLint("ObsoleteSdkInt")
-    private fun createNotificationChannel() {
+    fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -44,4 +44,5 @@ class App : Application() {
             Timber.i("Create Notification Channel name: $name description: $descriptionText")
         }
     }
+
 }
