@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.TodoFragment">
+    tools:context=".ui.todo.FinishedTodoFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/finished_todo_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/Home_title" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>
