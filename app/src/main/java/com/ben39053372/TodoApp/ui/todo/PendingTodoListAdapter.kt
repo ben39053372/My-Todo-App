@@ -1,6 +1,5 @@
 package com.ben39053372.TodoApp.ui.todo
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
