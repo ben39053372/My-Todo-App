@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ben39053372.TodoApp.ui.home.HomeFragment"
+        android:name="com.ben39053372.todoApp.ui.home.HomeFragment"
         android:label="@string/Home_title"
         tools:layout="@layout/main_fragment" />
 
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.ben39053372.TodoApp.ui.second.SecondFragment"
+        android:name="com.ben39053372.todoApp.ui.second.SecondFragment"
         android:label="@string/second_fragment_title"
         tools:layout="@layout/second_fragment" />
 
     <fragment
         android:id="@+id/viewpager2"
-        android:name="com.ben39053372.TodoApp.ui.viewPager2.ViewPager2Fragment"
+        android:name="com.ben39053372.todoApp.ui.viewPager2.ViewPager2Fragment"
         android:label="@string/view_pager2"
         tools:layout="@layout/fragment_view_pager2" />
 
     <fragment
         android:id="@+id/todo_fragment"
-        android:name="com.ben39053372.TodoApp.ui.todo.TodoFragment"
+        android:name="com.ben39053372.todoApp.ui.todo.TodoFragment"
         android:label="@string/todo"
         tools:layout="@layout/todo_fragment" />
 </navigation>
