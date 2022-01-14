@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.coroutineScope
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ben39053372.todoApp.R
@@ -22,7 +23,9 @@ class TodoPendingFragment : Fragment() {
 
     private val viewModel: TodoViewModel by activityViewModels()
     private lateinit var todoPendingList: RecyclerView
-    private val todoPendingListAdapter = TodoPendingListAdapter()
+    private val todoPendingListAdapter = TodoPendingListAdapter {
+        onTodoItemCheckBoxClick(it)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,11 +39,23 @@ class TodoPendingFragment : Fragment() {
         todoPendingList = view.findViewById(R.id.todo_pending_list)
         todoPendingList.layoutManager = LinearLayoutManager(requireContext())
         todoPendingList.adapter = todoPendingListAdapter
+        todoPendingList.addItemDecoration(
+            DividerItemDecoration(
+                todoPendingList.context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
 
         lifecycleScope.launch {
+            // Bind Pending list and view model data
             viewModel.pendingTodo.collect {
                 todoPendingListAdapter.updateData(it)
             }
         }
     }
+
+    private fun onTodoItemCheckBoxClick(item: TodoItem) {
+        viewModel.setIsDone(item)
+    }
+
 }

@@ -8,7 +8,7 @@ data class TodoItem(
     @PrimaryKey(autoGenerate = true) val uid: Int = 0,
     @ColumnInfo val name: String,
     @ColumnInfo val description: String?,
-    @ColumnInfo val isDone: Boolean,
+    @ColumnInfo var isDone: Boolean,
 )
 
 @Dao
@@ -27,6 +27,9 @@ interface TodoItemDao {
 
     @Insert
     fun insertAll(vararg todos: TodoItem)
+
+    @Update
+    fun updateTodoItem(vararg todo: TodoItem)
 
     @Delete
     fun delete(todoItem: TodoItem)

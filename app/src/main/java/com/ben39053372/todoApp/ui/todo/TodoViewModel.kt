@@ -17,4 +17,9 @@ class TodoViewModel(application: Application) : AndroidViewModel(application) {
         repository.addTodoItem(todo)
     }
 
+    fun setIsDone(todo: TodoItem) {
+        todo.isDone = !todo.isDone
+        repository.updateTodoItem(todo)
+    }
+
 }

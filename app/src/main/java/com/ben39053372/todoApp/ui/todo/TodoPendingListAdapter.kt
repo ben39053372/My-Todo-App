@@ -4,11 +4,12 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ben39053372.todoApp.R
 
-class TodoPendingListAdapter: RecyclerView.Adapter<TodoPendingListAdapter.ViewHolder>() {
+class TodoPendingListAdapter(private val onItemCheckBoxClick: (item: TodoItem) -> Unit): RecyclerView.Adapter<TodoPendingListAdapter.ViewHolder>() {
 
     private var dataSet: List<TodoItem> = listOf()
 
@@ -16,6 +17,7 @@ class TodoPendingListAdapter: RecyclerView.Adapter<TodoPendingListAdapter.ViewHo
 
         val title: TextView = view.findViewById(R.id.todo_item_title)
         val description: TextView = view.findViewById(R.id.todo_item_description)
+        val checkBox: CheckBox = view.findViewById(R.id.todo_item_isDone_checkBox)
 
     }
 
@@ -27,6 +29,14 @@ class TodoPendingListAdapter: RecyclerView.Adapter<TodoPendingListAdapter.ViewHo
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = dataSet[position].name
         holder.description.text = dataSet[position].description
+        holder.checkBox.isChecked = dataSet[position].isDone
+        holder.checkBox.setOnClickListener {
+            Thread {
+                holder.checkBox.isChecked = !dataSet[position].isDone
+                Thread.sleep(1000)
+                onItemCheckBoxClick(dataSet[position])
+            }.start()
+        }
     }
 
     override fun getItemCount(): Int {

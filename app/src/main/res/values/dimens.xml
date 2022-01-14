@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="drawer_width">260dp</dimen>
+    <dimen name="todo_list_item_height">40dp</dimen>
+
+    <dimen name="fontSize_xs">12sp</dimen>
+    <dimen name="fontSize_sm">16sp</dimen>
+    <dimen name="fontSize_md">20sp</dimen>
+    <dimen name="fontSize_lg">24sp</dimen>
+    <dimen name="fontSize_xl">28sp</dimen>
+
+    <dimen name="space_xs">12dp</dimen>
+    <dimen name="space_sm">16dp</dimen>
+    <dimen name="space_md">20dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">28dp</dimen>
+
 </resources>

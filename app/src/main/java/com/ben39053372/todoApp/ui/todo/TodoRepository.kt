@@ -20,4 +20,8 @@ class TodoRepository(val context: Context) {
      fun addTodoItem(item: TodoItem) {
         TodoDatabase.getInstance(context).TodoItemDao().insertAll(item)
     }
+
+    fun updateTodoItem(item: TodoItem) {
+        TodoDatabase.getInstance(context).TodoItemDao().updateTodoItem(item)
+    }
 }

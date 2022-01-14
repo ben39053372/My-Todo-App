@@ -10,10 +10,10 @@
         <entry key="app/src/main/res/layout/second_fragment.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/todo_finished_fragment.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/todo_finished_list_item.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/todo_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/todo_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/todo_fragment_view_pager2.xml" value="0.1265625" />
         <entry key="app/src/main/res/layout/todo_pending_fragment.xml" value="0.1796875" />
-        <entry key="app/src/main/res/layout/todo_pending_list_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/todo_pending_list_item.xml" value="0.45" />
         <entry key="app/src/main/res/menu/menu_drawer.xml" value="0.10208333333333333" />
       </map>
     </option>
@@ -23,7 +23,7 @@
       <item index="0" class="java.lang.String" itemvalue="androidx.annotation.RequiresApi" />
     </list>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
