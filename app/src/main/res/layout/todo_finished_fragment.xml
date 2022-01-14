@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.todo.FinishedTodoFragment">
+    tools:context=".ui.todo.TodoFinishedFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/finished_todo_list"
+        android:id="@+id/todo_finished_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

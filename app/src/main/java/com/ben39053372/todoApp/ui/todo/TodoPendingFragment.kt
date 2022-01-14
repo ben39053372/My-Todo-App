@@ -6,20 +6,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
+import androidx.lifecycle.coroutineScope
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ben39053372.todoApp.R
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
-class PendingTodoFragment : Fragment() {
+class TodoPendingFragment : Fragment() {
 
     companion object {
-        fun newInstance() = PendingTodoFragment()
+        fun newInstance() = TodoPendingFragment()
     }
 
-    val viewModel: TodoViewModel by activityViewModels()
-    lateinit var todoPendingList: RecyclerView
-    private val todoPendingListAdapter = PendingTodoListAdapter()
+    private val viewModel: TodoViewModel by activityViewModels()
+    private lateinit var todoPendingList: RecyclerView
+    private val todoPendingListAdapter = TodoPendingListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,11 +37,10 @@ class PendingTodoFragment : Fragment() {
         todoPendingList.layoutManager = LinearLayoutManager(requireContext())
         todoPendingList.adapter = todoPendingListAdapter
 
-        viewModel.getTodoItems().observe(viewLifecycleOwner, Observer<List<TodoItem>> {
-            todoPendingListAdapter.updateData(it)
-            todoPendingListAdapter.notifyDataSetChanged()
-        })
+        lifecycleScope.launch {
+            viewModel.pendingTodo.collect {
+                todoPendingListAdapter.updateData(it)
+            }
+        }
     }
-
-
 }

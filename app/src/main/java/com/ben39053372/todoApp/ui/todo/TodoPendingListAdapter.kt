@@ -1,5 +1,6 @@
 package com.ben39053372.todoApp.ui.todo
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ben39053372.todoApp.R
 
-class PendingTodoListAdapter: RecyclerView.Adapter<PendingTodoListAdapter.ViewHolder>() {
+class TodoPendingListAdapter: RecyclerView.Adapter<TodoPendingListAdapter.ViewHolder>() {
 
     private var dataSet: List<TodoItem> = listOf()
 
@@ -32,7 +33,9 @@ class PendingTodoListAdapter: RecyclerView.Adapter<PendingTodoListAdapter.ViewHo
         return dataSet.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(data: List<TodoItem>) {
         data.also { dataSet = it }
+        notifyDataSetChanged()
     }
 }

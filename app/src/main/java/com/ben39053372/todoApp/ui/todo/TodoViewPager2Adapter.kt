@@ -15,7 +15,7 @@ class TodoViewPager2Adapter(fa: FragmentActivity, viewPager: ViewPager2) :
     FragmentStateAdapter(fa) {
 
     var tagNameList: List<String> = listOf("Pending", "Finish")
-    var fragmentList: List<Fragment> = listOf(PendingTodoFragment(), FinishedTodoFragment())
+    var fragmentList: List<Fragment> = listOf(TodoPendingFragment(), TodoFinishedFragment())
 
     init {
         viewPager.adapter = this

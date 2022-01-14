@@ -10,7 +10,7 @@
         <entry key="app/src/main/res/layout/second_fragment.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/todo_finished_fragment.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/todo_finished_list_item.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/todo_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/todo_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/todo_fragment_view_pager2.xml" value="0.1265625" />
         <entry key="app/src/main/res/layout/todo_pending_fragment.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/todo_pending_list_item.xml" value="0.1" />

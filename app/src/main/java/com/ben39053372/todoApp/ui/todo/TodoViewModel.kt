@@ -1,28 +1,20 @@
 package com.ben39053372.todoApp.ui.todo
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 
-class TodoViewModel : ViewModel() {
-    private val todoItems = MutableLiveData<List<TodoItem>>(
-        listOf(
-            TodoItem(
-                name = "title 1",
-                description = "this is 1"
-            ),
-            TodoItem(
-                name = "title 2",
-                description = "this is 2"
-            ),TodoItem(
-                name = "title 3",
-                description = "this is 3"
-            )
-        )
-    )
+class TodoViewModel(application: Application) : AndroidViewModel(application) {
 
-    fun getTodoItems(): LiveData<List<TodoItem>> {
-        return todoItems
+    private val repository = TodoRepository(application.applicationContext)
+
+    val pendingTodo = repository.getPendingTodo()
+
+    val finishedTodo = repository.getFinishedTodo()
+
+    val allTodo = repository.getAllTodo()
+
+    fun addTodo(todo: TodoItem) {
+        repository.addTodoItem(todo)
     }
 
 }
